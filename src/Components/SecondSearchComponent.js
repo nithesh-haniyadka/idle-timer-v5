@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Button } from 'react-bootstrap';
-// import { BsSearch } from 'react-icons/bs';
+import { BsSearch } from 'react-icons/bs';
 
 function SecondSearchComponent() {
 	const productList = ["Africa"
@@ -21,7 +20,7 @@ function SecondSearchComponent() {
 		setProducts(filterBySearch);
 	}
 	const mystyle = {
-		marginLeft: "400px",
+		marginLeft: "600px",
 		marginTop: "10px",
 		fontWeight: "700"
 	};
@@ -31,7 +30,7 @@ function SecondSearchComponent() {
 			<div style={mystyle}>
 				<input onChange={e => setSearchVal(e.target.value)}>
 				</input>
-				<Button onClick={handleSearchClick} />
+				<BsSearch onClick={handleSearchClick} />
 			</div>
 			<div>
 

@@ -1,20 +1,6 @@
-// import React from "react";
-  
-// const Home = () => {
-//   return (
-//     <div>
-//       <h1>Home Page</h1>
-//     </div>
-//   );
-// };
-  
-// export default Home;
-
-
-
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap';
-// import { BsSearch } from 'react-icons/bs';
+import { BsSearch } from 'react-icons/bs';
 
 function FirstSearchComponent() {
 	const productList = ["blue pant"
@@ -36,7 +22,7 @@ function FirstSearchComponent() {
 		setProducts(filterBySearch);
 	}
 	const mystyle = {
-		marginLeft: "400px",
+		marginLeft: "600px",
 		marginTop: "10px",
 		fontWeight: "700"
 	};
@@ -46,7 +32,7 @@ function FirstSearchComponent() {
 			<div style={mystyle}>
 				<input onChange={e => setSearchVal(e.target.value)}>
 				</input>
-				<Button onClick={handleSearchClick} />
+				<BsSearch onClick={handleSearchClick} />
 			</div>
 			<div>
 
