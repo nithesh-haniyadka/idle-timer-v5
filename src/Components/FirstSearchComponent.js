@@ -13,6 +13,7 @@ function FirstSearchComponent() {
 		
 	const [products, setProducts] = useState(productList);
 	const [searchVal, setSearchVal] = useState("");
+
 	function handleSearchClick() {
 		if (searchVal === "") { setProducts(productList); return; }
 		const filterBySearch = productList.filter((item) => {
@@ -39,6 +40,9 @@ function FirstSearchComponent() {
 				{products.map((product) => {
 					return (
 						<div style={mystyle}>{product}</div>
+						// <table>
+						// 	<tr>Clothes</tr>
+						// </table>
 					)
 				})
 				}

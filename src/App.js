@@ -6,6 +6,8 @@ import { useState } from "react";
 import AuthContext from "./context/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from "./Components/HomePage";
+import LoginNew from "./Components/LoginPageNew";
+import NavBar from "./Components/NavBar";
 
 
 const App = () => {
@@ -23,10 +25,10 @@ const App = () => {
 <AuthContext.Provider value={{ status: authstatus, login: login, logout: logout }}>
   
   {authstatus ? <>
-    {/* <NavigationBar /> */}
+    <NavBar />
     <SessionTimeout/>
     <HomePage />
-  </> : <Login />}
+  </> : <LoginNew />}
 </AuthContext.Provider>
 
 

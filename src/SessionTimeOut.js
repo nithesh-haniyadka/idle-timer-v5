@@ -5,11 +5,10 @@ import AuthContext from "./context/AuthContext"
 
 
 let countdownInterval;
-let timeout = 1000 * 30 * 1; // to be in the idle state
+let timeout = 1000 * 10 * 1; // to be in the idle state
 
 const SessionTimeout = () => {
   const idleTimer = useRef(null);
-
   const login = {
     logged: true
   };
@@ -28,7 +27,7 @@ const SessionTimeout = () => {
   };
 
   const onIdle = () => {
-    const delay = 1000 * 1; // in order to display the pop up
+    const delay = 1000 * 10; // in order to display the pop up
     console.log("delay",delay);
 
     if (login.logged && !timeoutModalOpen) { // based on this we will be checking the condition whether we logged in and timeoutModal is not opened.
