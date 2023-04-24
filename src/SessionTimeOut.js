@@ -5,7 +5,7 @@ import AuthContext from "./context/AuthContext"
 
 
 let countdownInterval;
-let timeout = 1000 * 5 * 1;// to be in the idle state
+let timeout = 1000 * 5 * 1; // to be in the idle state
 
 const SessionTimeout = () => {
   const idleTimer = useRef(null);
@@ -14,9 +14,9 @@ const SessionTimeout = () => {
     logged: true
   };
 
-  const [timeoutModalOpen, setTimeoutModalOpen] = useState(false);
-  const [timeoutCountdown, setTimeoutCountdown] = useState(0);
-  const { logout } = useContext(AuthContext);
+  const [timeoutModalOpen, setTimeoutModalOpen] = useState(false); //usestate to open the modal based on the condition
+  const [timeoutCountdown, setTimeoutCountdown] = useState(0); // initialization of counter
+  const { logout } = useContext(AuthContext); // 
 
 
   const onActive = () => {
@@ -48,15 +48,15 @@ const SessionTimeout = () => {
     }
   };
 
-  const clearSessionTimeout = () => {
+  const clearSessionTimeout = () => { // to clear the time for the session
     clearTimeout(timeout);
   };
 
-  const clearSessionInterval = () => {
+  const clearSessionInterval = () => { // to clear the session for the interval
     clearInterval(countdownInterval);
   };
 
-  const handleLogout = () => {
+  const handleLogout = () => { // function to logout automatically after time out and manual logout button click
     setTimeoutModalOpen(false);
     clearSessionInterval();
     clearSessionTimeout();
@@ -64,7 +64,7 @@ const SessionTimeout = () => {
     // alert("Logged Out");
   };
 
-  const handleContinue = () => {
+  const handleContinue = () => { // function to continue to stay in the same page.
     setTimeoutModalOpen(false);
     clearSessionInterval();
     clearSessionTimeout();
