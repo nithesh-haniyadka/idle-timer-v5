@@ -44,7 +44,6 @@ const SessionTimeout = () => {
           }
         }, 1000);
       }, delay);
-      console.log("timeout",timeout);
 
     }
   };
