@@ -5,7 +5,7 @@ import AuthContext from "./context/AuthContext"
 
 
 let countdownInterval;
-let timeout = 1000 * 30 * 1;// 30 seconds i am in idle state by default set 
+let timeout = 1000 * 5 * 1;// to be in the idle state
 
 const SessionTimeout = () => {
   const idleTimer = useRef(null);
