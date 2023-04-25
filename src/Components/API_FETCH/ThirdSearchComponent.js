@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import { Table, Input } from "antd";
-import axios from "axios";
 import { userColumns } from "./column";
 import { useTableSearch } from "./useTableSearch";
+import {fetchUsers} from "../API/api"
+
+import {fetchUsers2} from "../API/api"
+import { useEffect } from "react";
+
 const { Search } = Input;
 
-const fetchUsers = async () => {
-  const { data } = await axios.get(
-    "https://jsonplaceholder.typicode.com/users/"
-  );
-  return { data };
-};
+
+// const fetchUsers = async () => {
+//   const { data } = await axios.get(
+//     "https://jsonplaceholder.typicode.com/users/"
+//   );
+//   return { data };
+// };
+
+
 export default function ThirdSearch() {
   const [searchVal, setSearchVal] = useState(null);
   const { filteredData, loading } = useTableSearch({

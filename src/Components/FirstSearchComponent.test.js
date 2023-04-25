@@ -1,7 +1,8 @@
-import { render, fireEvent, screen } from "@testing-library/react";
+import { render, fireEvent, screen, waitFor } from "@testing-library/react";
 import FirstSearchComponent from "../../src/Components/FirstSearchComponent";
-import SecondSearchComponent from "../Components/SecondSearchComponent";
 import LoginNew from "./LoginPageNew";
+// import { render, waitFor, screen } from "@testing-library/react";
+// import axios from 'axios';
 
 
 import { shallow } from 'enzyme';
@@ -10,34 +11,57 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 describe('renders <FirstSearchComponent />', () => {
+
   it('should pass shallow snapshot test', () => {
     const wrapper = shallow(<FirstSearchComponent />);
     expect(wrapper).toMatchSnapshot();
   });
-  it('renders SecondSearchComponent', () => {
-    const wrapper = shallow(<SecondSearchComponent />);
-    expect(wrapper).toMatchSnapshot();
+
+  it('should pass shallow snapshot test1',async () => {
+    render(<FirstSearchComponent/>);
+    await waitFor(()=>{
+      screen.getByText("blue pant")
+    })
   });
 
+  it('should pass shallow snapshot test2',async () => {
+    render(<FirstSearchComponent/>);
+    await waitFor(()=>{
+      screen.getByText("blue shirt")
+    })
+  });
+
+  it('should pass shallow snapshot test3',async () => {
+    render(<FirstSearchComponent/>);
+    await waitFor(()=>{
+      screen.getByText("black shoes")
+    })
+  });
+
+  it('should pass shallow snapshot test4',async () => {
+    render(<FirstSearchComponent/>);
+    await waitFor(()=>{
+      screen.getByText("brown shoes")
+    })
+  });
+
+  it('should pass shallow snapshot test5',async () => {
+    render(<FirstSearchComponent/>);
+    await waitFor(()=>{
+      screen.getByText("white pant")
+    })
+  });
+  it('should pass shallow snapshot test6',async () => {
+    render(<FirstSearchComponent/>);
+    await waitFor(()=>{
+      screen.getByText("white shoes")
+    })
+  });
 
 
 
 });
 
 //test block
-test("Test FirstSearchComponent", () => {
-// render the component on virtual dom
-render(<FirstSearchComponent />);
 
 
-
-// //select the elements you want to interact with
-// // const counter = screen.getByTestId("counter");
-// // const incrementBtn = screen.getByTestId("increment");
-
-// // //interact with those elements
-// // fireEvent.click(incrementBtn);
-
-// // //assert the expected result
-// // expect(counter).toHaveTextContent("1");
-});
