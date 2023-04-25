@@ -8,6 +8,8 @@ import FirstSearchComponent from "./FirstSearchComponent";
 import SecondSearchComponent from "./SecondSearchComponent";
 import ThirdSearch from "../Components/API_FETCH/ThirdSearchComponent"
 import { useEffect } from "react";
+import MockData from "../Components/Mockdata/MockData"
+
 
 
 const HomePage = () => {
@@ -22,7 +24,7 @@ const HomePage = () => {
     navigate('/firstsearch');
   };
 
-    const { logout } = useContext(AuthContext);
+    // const { logout } = useContext(AuthContext);
 
     return <Container className="mt-4">
 
@@ -30,10 +32,7 @@ const HomePage = () => {
             <Col></Col>
             <h1 style={{color:"black",textAlign:"center"}}> Welcome to Demo Project</h1>
             <Col></Col>
-        </Row>
-        {/* <h1 style={{color:"black",textAlign:"center"}}>  <button onClick={navigatetoFirstSearch}>Clothes</button></h1>
-        {/* <hr /> */}
-        {/* <h1 style={{color:"black",textAlign:"center"}}>  <button onClick={navigateToSecondSearch}>Countries</button></h1>         */}
+        </Row>        
 
     <Routes>
           <Route path="/secondsearch" element={<ThirdSearch />} />
