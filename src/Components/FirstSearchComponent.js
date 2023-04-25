@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BsSearch } from 'react-icons/bs';
-import { productList } from "./productlistJSON"
+import { productList } from "../JSON/productlistJSON"
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";

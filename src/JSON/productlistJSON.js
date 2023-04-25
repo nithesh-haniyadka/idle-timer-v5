@@ -7,6 +7,4 @@ export const productList = [
 		, "white pant"
 		, "white shoes"
 
-	
-
 ]
