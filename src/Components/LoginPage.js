@@ -13,11 +13,11 @@ const Login = () => {
 
     return <Container className="mt-5">
         <h1 style={{color:"black",textAlign:"center"}}> Login</h1>
-        <p style={{color:"orange",textAlign:"center"}}>Please enter you Login and Password</p>
+        <p style={{color:"orange",textAlign:"center"}}>Please enter your Name and Password</p>
         <form onSubmit={handleLogin}>
-            <p style={{color:"black",textAlign:"center"}} >Enter name <input type="text" /></p>
+            <p style={{color:"black",textAlign:"center"}} >Enter Name <input type="text" /></p>
             
-            <p style={{color:"black",textAlign:"center"}}>Password <input type="password" /></p>
+            <p style={{color:"black",textAlign:"center"}}> Password <input type="password" /></p>
             
             <div style={{color:"orange",textAlign:"center"}} >
                 <button type="submit">
