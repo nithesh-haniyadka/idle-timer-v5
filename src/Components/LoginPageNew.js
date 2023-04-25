@@ -1,18 +1,10 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import { useContext } from "react"
 import AuthContext from "../context/AuthContext"
-
 import "../css/styles.css";
 
 function LoginNew() {
-
-    const { login } = useContext(AuthContext);
-
-    const handleLogin = async e => {
-        e.preventDefault()
-        login();
-    };
+const { login } = useContext(AuthContext);
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
